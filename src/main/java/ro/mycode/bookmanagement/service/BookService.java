@@ -23,6 +23,11 @@ public class BookService {
         books.forEach(b-> System.out.println(b));
     }
 
+    public List<Book> getAllBooks(){
+        List<Book> books = bookRepository.findAll();
+        return books;
+    }
+
     public void add(Book book) throws ExceptieCarteaDejaExista {
         Optional<Book> pers = bookRepository.findByAutor(book.getAutor());
         if(pers.equals(Optional.empty())){
