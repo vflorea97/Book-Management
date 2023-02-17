@@ -49,5 +49,5 @@ public class BookResponse {
         List<Book> books = bookService.getCartiNumeAutorB("B");
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
-    
+
 }
